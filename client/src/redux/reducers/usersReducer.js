@@ -1,4 +1,6 @@
 import {
+  LOGOUT_USER,
+  LOGIN_USER,
   REG_USER
 } from "../actionTypes/userAT"
 const initialState = {
@@ -12,6 +14,17 @@ export const usersReducer = (state = initialState, action) => {
       return {
         ...state, users: {id: action.payload.id, name: action.payload.name, score: action.payload.score,}
       }
+      case LOGIN_USER:
+      return {
+        ...state, users: {id: action.payload.id, name: action.payload.name, score: action.payload.score,}
+      }
+
+      case LOGOUT_USER: {
+        return {
+          ...state, users: action.payload
+        };
+      }
+
       default: {
         return state
       }

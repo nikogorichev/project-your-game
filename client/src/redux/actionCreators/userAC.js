@@ -1,4 +1,4 @@
-import { LOGIN_USER } from "../actionTypes/userAT";
+import { LOGIN_USER, LOGOUT_USER } from "../actionTypes/userAT";
 
 import { REG_USER } from "../actionTypes/userAT";
 
@@ -15,3 +15,10 @@ export const regUserAC = (payload) => {
     payload
   }
 }
+export const logoutUserAC = (payload) => {
+  return {
+    type: LOGOUT_USER,
+    payload
+  }
+}
+
