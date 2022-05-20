@@ -6,6 +6,7 @@ import QuestionPole from "../QuestionPole/QuestionPole";
 const GamePole = () => {
   const dispatch = useDispatch();
   const { cards } = useSelector((store) => store.cards);
+  console.log(cards);
   useEffect(() => {
     fetch("/card")
       .then((res) => res.json())
