@@ -30,7 +30,7 @@ const GamePole = () => {
           <div>Phase3</div>
           <div>Ерунда</div>
           <div>Elbrus name</div>
-          <div>!Типаа смешно</div>
+          <div>!Cмешно</div>
           <div>Животные</div>
         </div>
         <div className={styles.qu}>
