@@ -6,13 +6,13 @@ import QuestionPole from "../QuestionPole/QuestionPole";
 const GamePole = () => {
   const dispatch = useDispatch();
   const { cards } = useSelector((store) => store.cards);
-  // console.log(cards);
   useEffect(() => {
     fetch("/card")
       .then((res) => res.json())
       .then((data) => dispatch({ type: ADD_CARD, payload: data }));
   }, []);
   return (
+
     <>
     <div className="theme1">
       <h3>Phase3</h3>
@@ -36,12 +36,7 @@ const GamePole = () => {
     </div>
     
     </>
-    // <div className="row">
-    //   {cards.map(el => {
-    //     // console.log('===', el);
-    //     return <QuestionPole key={el.id} card={el} />;
-    //   })}
-    // </div>
+ 
   );
 };
 

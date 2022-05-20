@@ -11,6 +11,11 @@ import Login from "../Login/Login";
 import Reg from "../Reg/Reg";
 import Game from "../Game/Game";
 import GamePole from "../GamePole/GamePole";
+import Nav from "../Nav/Nav";
+import Home from "../Home/Home";
+import Login from "../Login/Login";
+import Reg from "../Reg/Reg";
+
 
 
 function App() {
@@ -26,7 +31,6 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<Home />} />
     </Routes>
-
       </BrowserRouter>
     </Provider>
   );
