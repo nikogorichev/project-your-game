@@ -31,12 +31,20 @@ const QuestionPole = ({ card }) => {
   return (
     <div>
 
-      <button
+      {status ? <button disabled
         className={status ? style.first : style.second}
         onClick={() => changeStatus(setModalActive(true))}
       >
         {card.price}
-      </button>
+      </button> : 
+
+      <button 
+        className={status ? style.first : style.second}
+        onClick={() => changeStatus(setModalActive(true))}
+      >
+        {card.price}
+      </button>}
+      
       <Modal active={modalActive} setActive={setModalActive}>
         {card.question}
         <FormAnswer addAnswer={addAnswer}/>
