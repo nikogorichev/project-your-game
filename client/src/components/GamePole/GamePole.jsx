@@ -6,15 +6,22 @@ import QuestionPole from "../QuestionPole/QuestionPole";
 const GamePole = () => {
   const dispatch = useDispatch();
   const { cards } = useSelector((store) => store.cards);
-  console.log(cards);
+
+  const {users} = useSelector((store) => store.users);
+ 
+  const {points} = useSelector((store) => store.points);
+  
+
   useEffect(() => {
     fetch("/card")
       .then((res) => res.json())
       .then((data) => dispatch({ type: ADD_CARD, payload: data }));
   }, []);
+  
   return (
 
     <>
+    <h3>{users.name}, Ваш счет: {points}</h3>
     <div className="theme1">
       <h3>Phase3</h3>
       {cards.filter(el => el.id_theme === 1).map(el => <QuestionPole key={el.id} card={el} />)}

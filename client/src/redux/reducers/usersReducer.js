@@ -12,6 +12,7 @@ export const usersReducer = (state = initialState, action) => {
       return {
         ...state, users: {id: action.payload.id, name: action.payload.name, score: action.payload.score,}
       }
+      
       default: {
         return state
       }
