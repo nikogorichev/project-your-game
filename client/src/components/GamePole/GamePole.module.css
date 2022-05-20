@@ -1,0 +1,35 @@
+/* темы  */
+.all {  
+  justify-content: center;
+ margin-top: 25px;
+ margin-right: 100px;
+font-size: 3em;
+margin-left: 60px;
+margin-bottom: 25px;
+
+  }
+  /* вопросы */
+.theme {
+  flex-direction: row;
+  width: 400px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  margin-bottom: 25px;
+}
+/* полное поле  */
+.vse {
+  background-color: darkcyan;
+  display: flex;
+  
+  
+} 
+/* див вопросов всех */
+.qu {
+  flex-direction:column;
+  width: 400px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}

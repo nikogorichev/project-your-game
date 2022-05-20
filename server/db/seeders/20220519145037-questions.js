@@ -134,7 +134,7 @@ module.exports = {
       updatedAt: new Date(),
     }, {
        // тема хиханьки да хахоньки
-      question: 'Что Кирил поднял Вове???',
+      question: 'Что Кирилл поднял Вове???',
       answer: 'базу данных',
       isActive: true,
       price: 200,

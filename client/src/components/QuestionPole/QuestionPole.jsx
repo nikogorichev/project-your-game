@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
 const QuestionPole = ({ card }) => {
   const [modalActive, setModalActive] = useState(false);
   const [status, setStatus] = useState(false);
@@ -12,9 +11,10 @@ const QuestionPole = ({ card }) => {
   };
 
   return (
-    <>
+    <div>
+
       <a className="waves-effect waves-light btn">{card.price}</a>
-    </>
+    </div>
   );
 };
 
