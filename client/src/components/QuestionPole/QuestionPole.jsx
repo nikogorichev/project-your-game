@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const QuestionPole = ({card}) => {
-  // console.log(card);
+const QuestionPole = ({ card }) => {
+  const [modalActive, setModalActive] = useState(false);
+  const [status, setStatus] = useState(false);
+  const store = useSelector((store) => store);
+  const dispatch = useDispatch();
+
+  const addAnswer = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <div className="col s12 m6" >
-    <div className="card brown lighten-4">
-        <div className="card-content black-text">
-          <span className="card-title">Phase №{card.id}</span>
-          <p>Name :{card.question}</p>
-        </div>
-      </div>
-     
-    </div>
+    <>
+      <a className="waves-effect waves-light btn">{card.price}</a>
+    </>
   );
-}
+};
 
 export default QuestionPole;
-

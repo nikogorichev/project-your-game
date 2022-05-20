@@ -6,7 +6,6 @@ import QuestionPole from "../QuestionPole/QuestionPole";
 const GamePole = () => {
   const dispatch = useDispatch();
   const { cards } = useSelector((store) => store.cards);
-  // console.log(cards);
   useEffect(() => {
     fetch("/card")
       .then((res) => res.json())
@@ -15,7 +14,6 @@ const GamePole = () => {
   return (
     <div className="row">
       {cards.map(el => {
-        // console.log('===', el);
         return <QuestionPole key={el.id} card={el} />;
       })}
     </div>
