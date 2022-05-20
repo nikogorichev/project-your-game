@@ -13,12 +13,35 @@ const GamePole = () => {
       .then((data) => dispatch({ type: ADD_CARD, payload: data }));
   }, []);
   return (
-    <div className="row">
-      {cards.map(el => {
-        // console.log('===', el);
-        return <QuestionPole key={el.id} card={el} />;
-      })}
+    <>
+    <div className="theme1">
+      <h3>Phase3</h3>
+      {cards.filter(el => el.id_theme === 1).map(el => <QuestionPole key={el.id} card={el} />)}
     </div>
+    <div className="theme2">
+      <h3>Ерунда</h3>
+      {cards.filter(el => el.id_theme === 2).map(el => <QuestionPole key={el.id} card={el} />)}
+    </div>
+    <div className="theme3">
+      <h3>Elbrus name</h3>
+      {cards.filter(el => el.id_theme === 3).map(el => <QuestionPole key={el.id} card={el} />)}
+    </div>
+    <div className="theme4">
+      <h3>!Типаа смешно</h3>
+      {cards.filter(el => el.id_theme === 4).map(el => <QuestionPole key={el.id} card={el} />)}
+    </div>
+    <div className="theme5">
+      <h3>Животные</h3>
+      {cards.filter(el => el.id_theme === 5).map(el => <QuestionPole key={el.id} card={el} />)}
+    </div>
+    
+    </>
+    // <div className="row">
+    //   {cards.map(el => {
+    //     // console.log('===', el);
+    //     return <QuestionPole key={el.id} card={el} />;
+    //   })}
+    // </div>
   );
 };
 
