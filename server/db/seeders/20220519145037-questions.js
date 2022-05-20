@@ -76,7 +76,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      question: 'Сколько выпускников повесили на кухне "фотографий" ?',
+      question: 'Сколько выпускников повесили на кухне фотографи?',
       answer: '25',
       isActive: true,
       price: 800,
@@ -133,7 +133,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-       // тема хиханьки да хахоньки
+      // тема хиханьки да хахоньки
       question: 'Что Кирилл поднял Вове???',
       answer: 'базу данных',
       isActive: true,
@@ -142,7 +142,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      question: 'Кому на третьей фазе , четвертый десяток? ',
+      question: 'Кому на третьей фазе четвертый десяток? ',
       answer: 'Руслан',
       isActive: true,
       price: 400,
@@ -174,7 +174,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-       // тема животные
+      // тема животные
       question: 'Прозвище у Дениса из Сов?',
       answer: 'Ягуар',
       isActive: true,
@@ -191,7 +191,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      question: 'Чья морда утыкаеться на йоге в пол?',
+      question: 'Чья морда утыкается на йоге в пол?',
       answer: 'Собаки',
       isActive: true,
       price: 600,
@@ -199,7 +199,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      question: 'Кем становяться студенты на выпускном , под алкоголем ?',
+      question: 'Кем становятся студенты на выпускном под алкоголем ?',
       answer: 'Оборотнем',
       isActive: true,
       price: 800,
@@ -214,7 +214,7 @@ module.exports = {
       id_theme: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
-    },], {});
+    }], {});
   },
 
   async down(queryInterface, Sequelize) {
