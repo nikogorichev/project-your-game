@@ -9,7 +9,6 @@ function Reg() {
   const [regError, setError] = useState()
 
   const {users} = useSelector(store => store.users)
-  console.log(users);
 
   const regUser = async (event) => {
   event.preventDefault();
