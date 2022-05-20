@@ -1,11 +1,17 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-// import { loginUserAC } from '../../redux/actionCreators'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { loginUserAC } from '../../redux/actionCreators/userAC';
 
 function Login() {
   const dispatch = useDispatch();
+  const navigation = useNavigate()
+  const [regError, setError] = useState()
 
-  const loginUser = (event) => {
+  const {users} = useSelector(store => store.users)
+  console.log(users);
+
+  const loginUser = async (event) => {
     event.preventDefault();
 
     const {target} = event
@@ -15,13 +21,19 @@ function Login() {
       password: target.password.value
     }
 
-    // fetch ("/login", {
-    //   headers: {"content-type": "application/json"},
-    //   method: "POST",
-    //   body: JSON.stringify(data)
-    // })
-    // .then(res => res.json())
-    // .then(data => dispatch(loginUserAC(data)))
+    const response= await fetch ("/login", {
+      headers: {"content-type": "application/json"},
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+    if (!response.ok) {
+      const {error} = await response.json()
+      setError(error)
+    } else {
+      const data= await response.json()
+      dispatch(loginUserAC(data))
+      navigation('/game')
+    }
   }
 
   return (
@@ -41,8 +53,10 @@ function Login() {
         </div>
         <button type="submit" className="waves-effect waves-light btn-large">Войти</button>
       </div>
+      {
+        regError ? <div className="red-text">{regError}</div> : ''
+      }
 
-      
     </form>
   </div>
   )
