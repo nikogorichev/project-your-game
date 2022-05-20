@@ -7,6 +7,7 @@
 html,
 body {
   height: 100%;
+  wight: 100%
 
 }
 
@@ -19,7 +20,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  background-image: url(https://hotgeo.ru/uploads/posts/2017-10/1509280660_svoya_igra.jpg);
+  background-repeat: no-repeat;
+  background-image: url(https://wallbox.ru/resize/640x960/wallpapers/main/201337/ntv-shar-zelenyj-1ef20af.jpg);
+  background-color: rgb(164, 208, 147);
 }
 
 

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUserAC } from '../../redux/actionCreators/userAC';
 import { useNavigate } from 'react-router-dom';
-
 function Nav() {
 
   const dispatch = useDispatch();
@@ -23,10 +22,11 @@ function Nav() {
 
   return (
     <nav>
-    <div className="nav-wrapper">
+    <div className={"nav_wrapper"}>
       {
         !users.name 
       ?
+
       <><Link to="/" className="brand-logo">Your Game</Link><ul id="nav-mobile" className="right hide-on-med-and-down">
               <li><Link to="/registration">Регистрация</Link></li>
               <li><Link to="/login">Войти</Link></li>
