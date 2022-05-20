@@ -40,21 +40,22 @@ router.post('/login', async (req, res) => {
     email,
     password,
   } = req.body;
-
+  
   try {
     const user = await User.findOne({
       where: {
         email,
       },
     });
+    console.log('>>>', user)
 
     if (user && await bcrypt.compare(password, user.password)) {
       req.session.user = user;
       req.session.uid = user.id;
-      res.redirect('/main');
+      res.status(201).json(user); // переход на /game
     } else {
       res.status(401).json({
-        text: 'Неверный пароль или email',
+        error: 'Неверный пароль или email',
       });
     }
   } catch (error) {
@@ -64,13 +65,10 @@ router.post('/login', async (req, res) => {
 
 router.get('/logout', (req, res) => {
   const { user } = req.session;
-  if (user) {
+  
     req.session.destroy();
     res.clearCookie('sid');
-    res.redirect('/');
-  } else {
-    res.redirect('/login');
-  }
+    res.status(201).json({});
 });
 
 module.exports = router;

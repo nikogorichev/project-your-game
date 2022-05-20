@@ -4,6 +4,7 @@ import FormAnswer from "../FormAnswer/FormAnswer";
 import Modal from "../Modal/Modal";
 import style from "./QuestionPole.module.css"
 
+
 const QuestionPole = ({ card }) => {
   const [modalActive, setModalActive] = useState(false);
   const [status, setStatus] = useState(false);
@@ -29,6 +30,7 @@ const QuestionPole = ({ card }) => {
 
   return (
     <div>
+
       <button
         className={status ? style.first : style.second}
         onClick={() => changeStatus(setModalActive(true))}
@@ -39,6 +41,7 @@ const QuestionPole = ({ card }) => {
         {card.question}
         <FormAnswer addAnswer={addAnswer}/>
       </Modal>
+
     </div>
   );
 };
