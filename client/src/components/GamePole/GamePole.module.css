@@ -1,0 +1,43 @@
+/* темы  */
+.all {  
+  /* justify-content: space-between;
+ margin-top: 25px;
+ margin-right: 100px;
+font-size: 4em;
+margin-left: 60px;
+margin-bottom: 45px; */
+flex-direction: column;
+width: 600px;
+margin-top: 15px;
+display: flex;
+font-size: 50px ;
+flex-wrap: wrap;
+justify-content:space-around;
+margin-bottom: 25px;
+margin-left: 100px;
+  }
+  /* вопросы */
+.theme {
+  flex-direction: row;
+  width: 600px;
+  margin-top: 15px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content:space-between;
+  margin-bottom: 25px;
+}
+/* полное поле  */
+.vse {
+  
+  display: flex;
+  
+  
+} 
+/* див вопросов всех */
+.qu {
+  flex-direction:column;
+  width: 400px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
