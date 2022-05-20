@@ -18,8 +18,8 @@ router.post('/registration', async (req, res) => {
     },
   });
   if (user) {
-    res.status(401).json({
-      text: 'Такой email уже зарегистрирован',
+    res.status(404).json({
+      error: 'Такой email уже зарегистрирован',
     });
   } else {
     const newUser = await User.create({
@@ -29,7 +29,7 @@ router.post('/registration', async (req, res) => {
     });
     req.session.user = newUser;
     req.session.uid = newUser.id;
-    res.redirect('/main');
+    res.status(201).json(newUser);
   }
 });
 

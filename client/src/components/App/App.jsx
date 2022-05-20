@@ -4,13 +4,29 @@ import "./App.css";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { store } from "../../redux/store";
+
+import Nav from "../Nav/Nav";
+import Home from "../Home/Home";
+import Login from "../Login/Login";
+import Reg from "../Reg/Reg";
+import Game from "../Game/Game";
 import GamePole from "../GamePole/GamePole";
 
+
 function App() {
+
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <GamePole />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/registration" element={<Reg/>} />
+        <Route path="/game" element={<GamePole />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/logout" element={<Home />} />
+    </Routes>
+
       </BrowserRouter>
     </Provider>
   );
